@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jano Market - TikTok Accounts Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- App Container -->
+    <div class="app-container">
+        
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">
+                <i class="fa-solid fa-store"></i> JANO <span>MARKET</span>
+            </div>
+            <div class="header-actions">
+                <button id="login-btn" class="btn-outline"><i class="fa-solid fa-user"></i> Login</button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1>Verified TikTok Accounts</h1>
+            <p>Browse premium TikTok accounts categorized by rounds. Click below to explore.</p>
+        </section>
+
+        <!-- Round Tabs Navigation -->
+        <div class="rounds-nav">
+            <button class="round-btn active" data-round="1">1st Round <span class="badge">10</span></button>
+            <button class="round-btn" data-round="2">2nd Round <span class="badge">10</span></button>
+            <button class="round-btn" data-round="3">3rd Round <span class="badge">10</span></button>
+            <button class="round-btn" data-round="4">4th Round <span class="badge">10</span></button>
+        </div>
+
+        <!-- Accounts Display Area -->
+        <main class="accounts-container">
+            <!-- Dynamic accounts will load here -->
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>&copy; 2026 Jano Market. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Sign In</h2>
+            <p class="modal-sub">Enter your authorized phone number</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" id="phone-input" placeholder="Phone Number (e.g., 09...)" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password-input" placeholder="Password (same as phone)" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal (Hidden by default) -->
+    <div id="admin-modal" class="modal">
+        <div class="modal-content admin-content">
+            <span class="close-admin">&times;</span>
+            <h2><i class="fa-solid fa-shield-halved"></i> Admin Control Panel</h2>
+            <p>Manage TikTok accounts and platform settings.</p>
+            <div class="admin-actions-box">
+                <button id="add-account-btn" class="btn-primary"><i class="fa-solid fa-plus"></i> Add New TikTok Account</button>
+                <button id="logout-admin-btn" class="btn-danger"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            </div>
+            <div id="admin-accounts-list">
+                <!-- Admin item list -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
